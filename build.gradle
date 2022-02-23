@@ -1,0 +1,47 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group 'com.eee27go'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility=1.8
+
+compileJava.options.encoding('UTF-8')
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://maven.aliyun.com/nexus/content/groups/public/')
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation ('us.codecraft:webmagic-core:0.7.5'){
+        exclude group: "org.slf4j",module:"slf4j-log4j12"
+    }
+    implementation ('us.codecraft:webmagic-extension:0.7.5'){
+        exclude group: "org.slf4j",module:"slf4j-log4j12"
+    }
+
+    implementation 'cn.hutool:hutool-all:5.7.20'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.data:spring-data-commons'
+
+
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.1'
+    implementation 'net.jcip:jcip-annotations:1.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}

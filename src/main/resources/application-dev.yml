@@ -1,0 +1,27 @@
+mep:
+  name: spider
+  version: 1.0.0
+  profile: C:/home/spider/file
+
+server:
+  port: 9999
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 800
+    min-spare-threads: 30
+    basedir: /home/spider/tomcat
+logging:
+  level:
+    com.stemsoft.mep: debug
+    org.springframework: warn
+  dirpath: /home/spider/logs
+spring:
+  servlet:
+    multipart:
+      max-file-size:  10MB
+      max-request-size:  20MB
+  devtools:
+    restart:
+      enabled: true
