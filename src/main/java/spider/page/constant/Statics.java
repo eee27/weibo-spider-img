@@ -10,7 +10,7 @@ public class Statics {
 	public static final String Mobile_Api_Prefix = "https://m.weibo.cn/";
 
 	public static String Local_Disk="D";
-	public static String Local_Root_Path=Local_Disk+":\\webmagic\\weibo\\";
+	public static String Local_Root_Path=Local_Disk+":\\spider\\weibo\\";
 	public static String Local_User_List_File=Local_Root_Path+"user.txt";
 	public static String Local_Downable_Save_Path =Local_Root_Path+"downable\\";
 
